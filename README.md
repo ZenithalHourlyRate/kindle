@@ -1,6 +1,4 @@
-# kindle
-
-将 kindle 作为副屏
+# 将 Kindle 作为状态屏
 
 ![](img/demo.jpg)
 
@@ -100,7 +98,7 @@ swapon /mnt/base-us/swapfile
 
 但是观测发现 Kindle 并不会自己挂载 swap，所以我们需要一个 helper 在开机后执行 `swapon -a`，这个参考 `zhelper` 文件夹（还没写）。安装方法就是将 `zhelper` 目录放在 `/mnt/base-us/extensions` 目录下。
 
-## 副屏
+## 状态屏
 
 这个的主要灵感是 <https://github.com/mpetroff/kindle-weather-display/blob/master/kindle/display-weather.sh>，发现了其中有展示图片的方法。
 
