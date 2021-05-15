@@ -1,0 +1,53 @@
+{
+	"items": [
+	{
+		"name": "Screen",
+		"priority": -1,
+		"items": [
+		{
+			"name": "Enable Screen",
+			"if": "\"/mnt/us/screen/enable\" -f!",
+			"action": "./bin/screen.sh",
+			"params": "enable",
+			"exitmenu": false,
+			"refresh": true,
+			"status": false
+		},
+		{
+			"name": "Disable Screen",
+			"if": "\"/mnt/us/screen/enable\" -f",
+			"action": "./bin/screen.sh",
+			"params": "disable",
+			"exitmenu": false,
+			"refresh": true,
+			"status": false
+		},
+		{
+			"name": "Show Screen",
+			"if": "\"/tmp/screen.png\" -f",
+			"action": "./bin/screen.sh",
+			"params": "show",
+			"exitmenu": false,
+			"refresh": false,
+			"status": false
+		},
+		{
+			"name": "Test Screen",
+			"action": "./bin/screen.sh",
+			"params": "test",
+			"exitmenu": false,
+			"refresh": false,
+			"status": false
+		},
+		{
+			"name": "Close Framework (Dangerous)",
+			"action": "./bin/screen.sh",
+			"params": "close_framework",
+			"exitmenu": false,
+			"refresh": false,
+			"status": false
+		}
+		]
+	}
+	]
+}
