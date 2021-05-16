@@ -40,9 +40,9 @@
 			"status": false
 		},
 		{
-			"name": "Close Framework (Dangerous)",
+			"name": "Stop Framework (Dangerous)",
 			"action": "./bin/screen.sh",
-			"params": "close_framework",
+			"params": "stop_framework",
 			"exitmenu": false,
 			"refresh": false,
 			"status": false
