@@ -1,5 +1,7 @@
 # 将 Kindle 作为状态屏
 
+![](img/demo_with_ddns.jpg)
+
 ![](img/demo.jpg)
 
 ## 前言
