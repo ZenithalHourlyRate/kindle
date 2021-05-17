@@ -5,14 +5,14 @@
 
 enable()
 {
-  initctl stop powerd
+  initctl stop powerd 2>/dev/null || true
   touch /mnt/us/screen/enable
 }
 
 disable()
 {
   rm -f /mnt/us/screen/enable
-  initctl start powerd
+  initctl start powerd 2>/dev/null || true
 }
 
 show()
@@ -28,6 +28,9 @@ test()
 update()
 {
   if [ -f /tmp/screen.png ] && [ -f /mnt/us/screen/enable ]; then
+    # ensure that powerd was stopped
+    # since `enable` may not be called during one boot
+    initctl stop powerd 2>/dev/null || true
     eips -f -g /tmp/screen.png
   fi
 }
